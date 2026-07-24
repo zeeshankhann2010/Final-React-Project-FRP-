@@ -1,0 +1,409 @@
+/* ===== Find Donor Section ===== */
+.find-donor {
+    background-color: #F8FAFC;
+    padding: 54px 18px;
+    min-height: 100vh;
+    font-family: 'Poppins', 'Inter', sans-serif;
+}
+
+.find-donor__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ===== Header ===== */
+.find-donor__header {
+    text-align: center;
+    margin-bottom: 36px;
+    animation: fadeInUp 0.6s ease both;
+}
+
+.find-donor__title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 9px;
+    letter-spacing: -0.5px;
+}
+
+.find-donor__subtitle {
+    font-family: 'Poppins', sans-serif;
+    color: #6B7280;
+    font-size: 0.9rem;
+    font-weight: 400;
+    max-width: 450px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ===== Filter Bar ===== */
+.find-donor__filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 13px;
+    background: #FFFFFF;
+    padding: 18px;
+    border-radius: 13px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    margin-bottom: 22px;
+    animation: fadeInUp 0.6s ease 0.15s both;
+}
+
+.find-donor__search-box {
+    position: relative;
+    flex: 1 1 240px;
+}
+
+.find-donor__search-icon {
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6B7280;
+    font-size: 0.82rem;
+}
+
+.find-donor__search-input {
+    width: 100%;
+    padding: 10px 11px 10px 33px;
+    border: 1.5px solid #E5E7EB;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.83rem;
+    color: #1F2937;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.find-donor__search-input:focus {
+    border-color: #DC2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.find-donor__search-input::placeholder {
+    color: #9CA3AF;
+}
+
+.find-donor__select {
+    padding: 10px 11px;
+    border: 1.5px solid #E5E7EB;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.79rem;
+    color: #1F2937;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    outline: none;
+    min-width: 135px;
+    transition: border-color 0.2s ease;
+}
+
+.find-donor__select:focus {
+    border-color: #DC2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.find-donor__checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.79rem;
+    font-weight: 500;
+    color: #1F2937;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.find-donor__checkbox {
+    accent-color: #DC2626;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+
+.find-donor__reset-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px 14px;
+    background-color: #F1F5F9;
+    color: #1F2937;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.79rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.find-donor__reset-btn:hover {
+    background-color: #E2E8F0;
+}
+
+.find-donor__reset-btn:active {
+    transform: scale(0.97);
+}
+
+/* ===== Result Count ===== */
+.find-donor__result-count {
+    font-family: 'Poppins', sans-serif;
+    color: #6B7280;
+    font-size: 0.79rem;
+    font-weight: 500;
+    margin-bottom: 14px;
+    animation: fadeIn 0.6s ease 0.25s both;
+}
+
+/* ===== Donor Grid ===== */
+.find-donor__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(243px, 1fr));
+    gap: 18px;
+}
+
+/* ===== Donor Card ===== */
+.donor-card {
+    background-color: #FFFFFF;
+    border-radius: 13px;
+    padding: 18px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #F1F5F9;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: fadeInUp 0.5s ease both;
+}
+
+/* Staggered entrance for first few cards */
+.find-donor__grid .donor-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.find-donor__grid .donor-card:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.find-donor__grid .donor-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.find-donor__grid .donor-card:nth-child(4) {
+    animation-delay: 0.25s;
+}
+
+.find-donor__grid .donor-card:nth-child(5) {
+    animation-delay: 0.3s;
+}
+
+.find-donor__grid .donor-card:nth-child(6) {
+    animation-delay: 0.35s;
+}
+
+.find-donor__grid .donor-card:nth-child(7) {
+    animation-delay: 0.4s;
+}
+
+.find-donor__grid .donor-card:nth-child(8) {
+    animation-delay: 0.45s;
+}
+
+.donor-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.09);
+}
+
+.donor-card__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 13px;
+}
+
+.donor-card__blood-badge {
+    background-color: #DC2626;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 0.79rem;
+    padding: 5px 13px;
+    border-radius: 20px;
+}
+
+.donor-card__status {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 4px 9px;
+    border-radius: 20px;
+}
+
+.donor-card__status--available {
+    background-color: #DCFCE7;
+    color: #16A34A;
+}
+
+.donor-card__status--unavailable {
+    background-color: #F1F5F9;
+    color: #6B7280;
+}
+
+.donor-card__name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.01rem;
+    font-weight: 600;
+    color: #1F2937;
+    margin-bottom: 11px;
+}
+
+.donor-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 14px;
+}
+
+.donor-card__info-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.77rem;
+    font-weight: 400;
+    color: #6B7280;
+}
+
+.donor-card__info-item i {
+    color: #DC2626;
+    width: 13px;
+    font-size: 0.72rem;
+}
+
+.donor-card__contact-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #DC2626;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.81rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.donor-card__contact-btn:hover {
+    background-color: #B91C1C;
+}
+
+.donor-card__contact-btn:active {
+    transform: scale(0.98);
+}
+
+/* ===== Empty State ===== */
+.find-donor__empty {
+    text-align: center;
+    padding: 54px 18px;
+    font-family: 'Poppins', sans-serif;
+    color: #6B7280;
+    font-size: 0.86rem;
+    animation: fadeIn 0.5s ease both;
+}
+
+.find-donor__empty-icon {
+    font-size: 2.25rem;
+    color: #DC2626;
+    margin-bottom: 11px;
+    display: block;
+}
+
+/* ===== Responsive: Tablet ===== */
+@media (max-width: 1024px) {
+    .find-donor__grid {
+        grid-template-columns: repeat(auto-fill, minmax(216px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .find-donor {
+        padding: 36px 14px;
+    }
+
+    .find-donor__title {
+        font-size: 1.62rem;
+    }
+
+    .find-donor__filters {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 14px;
+    }
+
+    .find-donor__search-box,
+    .find-donor__select,
+    .find-donor__reset-btn {
+        width: 100%;
+    }
+
+    .find-donor__checkbox-label {
+        justify-content: flex-start;
+    }
+
+    .find-donor__grid {
+        grid-template-columns: repeat(auto-fill, minmax(198px, 1fr));
+        gap: 14px;
+    }
+}
+
+/* ===== Responsive: Mobile ===== */
+@media (max-width: 480px) {
+    .find-donor {
+        padding: 29px 13px;
+    }
+
+    .find-donor__title {
+        font-size: 1.35rem;
+    }
+
+    .find-donor__subtitle {
+        font-size: 0.81rem;
+    }
+
+    .find-donor__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .donor-card {
+        padding: 14px;
+    }
+}

@@ -1,0 +1,596 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap");
+
+/* ===== Animations ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ===== Donate Blood Page ===== */
+.donate-blood__hero {
+    background: #FFFFFF;
+    padding: 90px 22px 72px;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.donate-blood__hero-inner {
+    max-width: 612px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.donate-blood__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #FEF2F2;
+    color: #DC2626;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 7px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.6s ease both;
+}
+
+.donate-blood__title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: #1F2937;
+    line-height: 1.25;
+    margin-bottom: 14px;
+    letter-spacing: -0.01em;
+    animation: fadeInUp 0.6s ease 0.1s both;
+}
+
+.donate-blood__title-highlight {
+    color: #DC2626;
+}
+
+.donate-blood__subtitle {
+    font-size: 14px;
+    color: #6B7280;
+    max-width: 432px;
+    margin: 0 auto 29px;
+    line-height: 1.7;
+    animation: fadeInUp 0.6s ease 0.2s both;
+}
+
+.donate-blood__hero-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 50px;
+    animation: fadeInUp 0.6s ease 0.3s both;
+}
+
+.donate-blood__hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-family: "Poppins", sans-serif;
+    background: #DC2626;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 13.5px;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    padding: 13px 27px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.donate-blood__hero-btn:hover {
+    background: #B91C1C;
+    transform: translateY(-2px);
+}
+
+.donate-blood__hero-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #1F2937;
+    font-weight: 600;
+    font-size: 13px;
+    text-decoration: none;
+    border-bottom: 1.5px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.donate-blood__hero-link i {
+    font-size: 11px;
+    transition: transform 0.2s ease;
+}
+
+.donate-blood__hero-link:hover {
+    color: #DC2626;
+    border-color: #DC2626;
+}
+
+.donate-blood__hero-link:hover i {
+    transform: translateX(3px);
+}
+
+.donate-blood__hero-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    font-size: 12px;
+    color: #9CA3AF;
+    animation: fadeIn 0.6s ease 0.5s both;
+}
+
+.donate-blood__hero-stats strong {
+    color: #1F2937;
+    font-weight: 700;
+    margin-right: 4px;
+}
+
+.donate-blood__hero-stats-divider {
+    width: 1px;
+    height: 13px;
+    background: #E5E7EB;
+}
+
+/* ===== Section Shared Styles ===== */
+.donate-blood__section-tag {
+    display: inline-block;
+    background: #FEF2F2;
+    color: #DC2626;
+    font-size: 11.5px;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 13px;
+    animation: fadeInUp 0.6s ease both;
+}
+
+.donate-blood__section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 9px;
+    animation: fadeInUp 0.6s ease 0.1s both;
+}
+
+.donate-blood__section-subtitle {
+    font-size: 13px;
+    color: #6B7280;
+    margin-bottom: 40px;
+    animation: fadeInUp 0.6s ease 0.2s both;
+}
+
+/* ===== Why It's Useful ===== */
+.donate-blood__why {
+    text-align: center;
+    padding: 65px 50px;
+    background: #FFFFFF;
+}
+
+.donate-blood__why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.donate-blood__why-card {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 13px;
+    padding: 25px 20px;
+    text-align: left;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+    animation: fadeInUp 0.5s ease both;
+}
+
+.donate-blood__why-grid .donate-blood__why-card:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.donate-blood__why-grid .donate-blood__why-card:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.donate-blood__why-grid .donate-blood__why-card:nth-child(3) {
+    animation-delay: 0.35s;
+}
+
+.donate-blood__why-card:hover {
+    border-color: #DC2626;
+    transform: translateY(-4px);
+}
+
+.donate-blood__why-icon-wrapper {
+    width: 43px;
+    height: 43px;
+    border-radius: 11px;
+    background: #FEF2F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.donate-blood__why-icon {
+    color: #DC2626;
+    font-size: 17px;
+}
+
+.donate-blood__why-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14.5px;
+    color: #1F2937;
+    margin-bottom: 7px;
+}
+
+.donate-blood__why-desc {
+    font-size: 12px;
+    color: #6B7280;
+    line-height: 1.6;
+}
+
+/* ===== How It Works ===== */
+.donate-blood__how {
+    text-align: center;
+    padding: 65px 50px;
+    background: #F8FAFC;
+}
+
+.donate-blood__how-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.donate-blood__how-step {
+    position: relative;
+    background: #FFFFFF;
+    border: 1px solid #F1F5F9;
+    border-radius: 13px;
+    padding: 29px 20px 23px;
+    text-align: left;
+    animation: fadeInUp 0.5s ease both;
+}
+
+.donate-blood__how-steps .donate-blood__how-step:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.donate-blood__how-steps .donate-blood__how-step:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.donate-blood__how-steps .donate-blood__how-step:nth-child(3) {
+    animation-delay: 0.35s;
+}
+
+.donate-blood__how-steps .donate-blood__how-step:nth-child(4) {
+    animation-delay: 0.45s;
+}
+
+.donate-blood__how-number {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #F1F5F9;
+}
+
+.donate-blood__how-icon-wrapper {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #FEF2F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.donate-blood__how-icon {
+    color: #DC2626;
+    font-size: 16px;
+}
+
+.donate-blood__how-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #1F2937;
+    margin-bottom: 7px;
+}
+
+.donate-blood__how-desc {
+    font-size: 11.5px;
+    color: #6B7280;
+    line-height: 1.6;
+}
+
+/* ===== Eligibility ===== */
+.donate-blood__eligibility {
+    text-align: center;
+    padding: 65px 50px;
+    background: #FFFFFF;
+}
+
+.donate-blood__eligibility-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.donate-blood__eligibility-card {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    background: #F8FAFC;
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+    padding: 16px 14px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 500;
+    color: #374151;
+    animation: fadeInUp 0.5s ease both;
+}
+
+.donate-blood__eligibility-grid .donate-blood__eligibility-card:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.donate-blood__eligibility-grid .donate-blood__eligibility-card:nth-child(2) {
+    animation-delay: 0.22s;
+}
+
+.donate-blood__eligibility-grid .donate-blood__eligibility-card:nth-child(3) {
+    animation-delay: 0.29s;
+}
+
+.donate-blood__eligibility-grid .donate-blood__eligibility-card:nth-child(4) {
+    animation-delay: 0.36s;
+}
+
+.donate-blood__eligibility-icon {
+    color: #DC2626;
+    font-size: 14.5px;
+    flex-shrink: 0;
+}
+
+/* ===== Registration Form ===== */
+.donate-blood__form-section {
+    text-align: center;
+    padding: 65px 50px;
+    background: #F8FAFC;
+    animation: fadeInUp 0.6s ease both;
+}
+
+.donate-blood__form {
+    max-width: 540px;
+    margin: 0 auto;
+    text-align: left;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 15px;
+    padding: 32px;
+}
+
+.donate-blood__form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.donate-blood__form-group {
+    margin-bottom: 16px;
+}
+
+.donate-blood__form-label {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #1F2937;
+    margin-bottom: 5px;
+}
+
+.donate-blood__form-input,
+.donate-blood__form-select,
+.donate-blood__form-textarea {
+    width: 100%;
+    padding: 10px 13px;
+    border: 1.5px solid #E5E7EB;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12.5px;
+    color: #1F2937;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.donate-blood__form-input:focus,
+.donate-blood__form-select:focus,
+.donate-blood__form-textarea:focus {
+    border-color: #DC2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.donate-blood__form-textarea {
+    resize: vertical;
+}
+
+.donate-blood__form-error {
+    display: block;
+    color: #DC2626;
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+.donate-blood__form-submit {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    background: #DC2626;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 13.5px;
+    border: none;
+    border-radius: 8px;
+    padding: 13px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.donate-blood__form-submit:hover {
+    background: #B91C1C;
+}
+
+.donate-blood__form-submit:active {
+    transform: scale(0.98);
+}
+
+/* ===== Success State ===== */
+.donate-blood__success {
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: center;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 15px;
+    padding: 43px 29px;
+    animation: fadeIn 0.5s ease both;
+}
+
+.donate-blood__success-icon {
+    font-size: 43px;
+    color: #16A34A;
+    margin-bottom: 14px;
+}
+
+.donate-blood__success-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 7px;
+}
+
+.donate-blood__success-text {
+    font-size: 12.5px;
+    color: #6B7280;
+}
+
+/* ===== Bottom CTA ===== */
+.donate-blood__cta {
+    text-align: center;
+    background: #DC2626;
+    padding: 58px 22px;
+    animation: fadeInUp 0.6s ease both;
+}
+
+.donate-blood__cta-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 9px;
+}
+
+.donate-blood__cta-text {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 25px;
+}
+
+.donate-blood__cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: #FFFFFF;
+    color: #DC2626;
+    font-weight: 600;
+    font-size: 13.5px;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    padding: 13px 29px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.donate-blood__cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+
+    .donate-blood__why-grid,
+    .donate-blood__how-steps,
+    .donate-blood__eligibility-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .donate-blood__hero,
+    .donate-blood__why,
+    .donate-blood__how,
+    .donate-blood__eligibility,
+    .donate-blood__form-section {
+        padding: 50px 22px;
+    }
+
+    .donate-blood__title {
+        font-size: 27px;
+    }
+
+    .donate-blood__why-grid,
+    .donate-blood__how-steps,
+    .donate-blood__eligibility-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .donate-blood__form {
+        padding: 22px;
+    }
+
+    .donate-blood__form-row {
+        grid-template-columns: 1fr;
+    }
+}

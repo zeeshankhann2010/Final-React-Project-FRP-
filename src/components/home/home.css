@@ -1,0 +1,544 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 36px;
+    padding: 72px 54px;
+    min-height: 540px;
+    background: #F8FAFC;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-left {
+    flex: 1;
+    max-width: 504px;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.tag {
+    display: inline-block;
+    background: #FEE2E2;
+    border: 1px solid #DC2626;
+    color: #B91C1C;
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+.hero-left h1 {
+    font-size: 43px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 18px;
+    letter-spacing: -0.5px;
+    color: #1F2937;
+}
+
+.hero-left h1 br+span,
+.hero-left h1 .highlight {
+    color: #DC2626;
+}
+
+.hero-left p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #6B7280;
+    margin-bottom: 29px;
+    max-width: 432px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 13px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 7px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.25s ease;
+    font-family: "Poppins", sans-serif;
+}
+
+.primary-btn {
+    background: #DC2626;
+    color: #FFFFFF;
+}
+
+.primary-btn:hover {
+    background: #B91C1C;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(220, 38, 38, 0.25);
+}
+
+.secondary-btn {
+    background: #FFFFFF;
+    color: #1F2937;
+    border: 1.5px solid #E5E7EB;
+}
+
+.secondary-btn:hover {
+    border-color: #DC2626;
+    color: #DC2626;
+    transform: translateY(-2px);
+}
+
+.hero-right {
+    width: 360px;
+    height: 360px;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== Stats Section ===== */
+.stats {
+    padding: 45px 18px;
+    background-color: #f9f3ef;
+    font-family: "Inter", sans-serif;
+}
+
+.stats__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+}
+
+/* ===== Individual Card ===== */
+.stats__card {
+    flex: 1 1 225px;
+    max-width: 252px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background-color: #fdfdfd;
+    border: 1px solid #f0f0f0;
+    border-radius: 11px;
+    padding: 18px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stats__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(220, 38, 38, 0.15);
+}
+
+/* ===== Icon Circle ===== */
+.stats__icon-wrapper {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 50%;
+    background-color: #fdeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stats__icon {
+    font-size: 20px;
+    color: #dc2626;
+}
+
+/* ===== Text Content ===== */
+.stats__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stats__count {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.stats__label {
+    font-size: 13px;
+    color: #6b6b6b;
+    margin: 4px 0 0;
+}
+
+.blood-compatibility {
+    padding: 54px 22px;
+    background-color: #FFF9F7;
+}
+
+.blood-compatibility__container {
+    display: flex;
+    align-items: flex-start;
+    gap: 29px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blood-compatibility__table-wrap {
+    flex: 2;
+    min-width: 0;
+}
+
+.blood-compatibility__title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 18px;
+}
+
+.blood-compatibility__table-card {
+    background-color: #ffffff;
+    border-radius: 11px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.blood-compatibility__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Inter', sans-serif;
+}
+
+.blood-compatibility__table thead th {
+    background-color: #DC2626;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    padding: 13px 14px;
+}
+
+.blood-compatibility__table tbody td {
+    text-align: center;
+    padding: 13px 14px;
+    font-size: 13px;
+    color: #374151;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.blood-compatibility__table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.blood-compatibility__table tbody tr:nth-child(even) {
+    background-color: #FDF6F5;
+}
+
+.blood-compatibility__group {
+    font-weight: 700;
+    color: #DC2626;
+}
+
+.blood-compatibility__side {
+    flex: 1;
+    min-width: 234px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.blood-compatibility__info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px;
+    border-radius: 11px;
+}
+
+.blood-compatibility__info-card--donor {
+    background-color: #EAF7EE;
+}
+
+.blood-compatibility__info-card--recipient {
+    background-color: #EAF1FB;
+}
+
+.blood-compatibility__info-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.blood-compatibility__info-icon--donor {
+    background-color: #22C55E;
+}
+
+.blood-compatibility__info-icon--recipient {
+    background-color: #2563EB;
+}
+
+.blood-compatibility__info-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    margin: 0 0 4px;
+}
+
+.blood-compatibility__info-value {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 6px;
+}
+
+.blood-compatibility__info-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: #6b7280;
+    margin: 0;
+}
+
+.why-donate {
+    width: 100%;
+    padding: 54px 36px;
+    background-color: #ffffff;
+    font-family: "Inter", sans-serif;
+}
+
+.why-donate__header {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.why-donate__title {
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 11px 0;
+}
+
+.why-donate__underline {
+    display: inline-block;
+    width: 45px;
+    height: 3px;
+    background-color: #dc2626;
+    border-radius: 2px;
+}
+
+.why-donate__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.why-donate__card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background-color: #fdf1f1;
+    border-radius: 11px;
+    padding: 22px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.why-donate__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(220, 38, 38, 0.12);
+}
+
+.why-donate__icon-wrapper {
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 9px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.why-donate__icon {
+    font-size: 20px;
+    color: #dc2626;
+}
+
+.why-donate__card-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 6px 0;
+}
+
+.why-donate__card-text {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .why-donate__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .why-donate {
+        padding: 36px 18px;
+    }
+
+    .why-donate__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-donate__title {
+        font-size: 20px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .blood-compatibility__container {
+        flex-direction: column;
+    }
+
+    .blood-compatibility__side {
+        flex-direction: row;
+        width: 100%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .blood-compatibility {
+        padding: 36px 14px;
+    }
+
+    .blood-compatibility__table thead th,
+    .blood-compatibility__table tbody td {
+        padding: 9px 7px;
+        font-size: 11px;
+    }
+
+    .blood-compatibility__side {
+        flex-direction: column;
+    }
+
+    .blood-compatibility__info-value {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .how-it-works__steps {
+        flex-direction: column;
+        gap: 36px;
+        padding: 0 14px;
+    }
+
+    .how-it-works__connector {
+        display: none;
+    }
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 54px 22px;
+    }
+
+    .hero-left {
+        max-width: 100%;
+    }
+
+    .hero-left p {
+        margin: 0 auto 29px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-right {
+        width: 100%;
+        max-width: 288px;
+        height: 198px;
+        min-height: 198px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-left h1 {
+        font-size: 31px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 13px;
+        width: 100%;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 195px;
+        padding: 11px 0;
+        font-size: 13px;
+        text-align: center;
+    }
+}
